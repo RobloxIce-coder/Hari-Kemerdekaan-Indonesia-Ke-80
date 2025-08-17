@@ -1,0 +1,27 @@
+.quotes {
+  display: block;
+  position: absolute;
+  top: 1430px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  height: 350px;
+  border-radius: 10px;
+  background-color: brown;
+  z-index: 50;
+}
+
+#quote1 {
+  position: relative;
+  top: 5px;
+  left: 5px;
+  width: 100px;
+  height: 100px;
+}
+#quote2 {
+  position: relative;
+  top: 70%;
+  left: 35%;
+  width: 100px;
+  height: 100px;
+}
