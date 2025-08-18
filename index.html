@@ -5,9 +5,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="follow, index">
-  <meta name="description" content="Selamat memperingati Hari Ulang Tahun Kemerdekaan Indonesia yang ke-80🎉, Semoga menjadi semangat awal dalam melanjutkan perjuangan para pahlawan yang telah berjasa dalam memperjuangkan dan mempertahankan kemerdekaan Indonesia🇮🇩... Merdekaaa!!!">
+  <meta name="author" content="Ahmad Daniar, Muhammad Cahyo Nugroho">
+  <meta name="description" content="Ini contoh website dengan ui sederhana">
   <title>HUT RI ke-80 kemerdekaan Indonesia</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
   <style>
     body {
       background-color: black;
@@ -139,10 +141,10 @@
 </head>
 
 <body>
-  <div id="crc-container" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background-color: black; opacity: 1; z-index: 10; transition: all 3s ease;">
-    <div id="crc1" style="width: 30px; height: 30px; border-radius: 50%; margin: 5px; background-color: blue; transition: all 0.3s ease;"></div>
+  <div id="crc-container" style="position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background-color: black; opacity: 1; z-index: 10; transition: all 3s ease;">
+    <div id="crc1" style="width: 15px; height: 15px; border-radius: 50%; margin: 5px; background-color: blue; transition: all 0.3s ease;"></div>
      <div id="crc2" style="width: 20px; height: 20px; border-radius: 50%; margin: 5px; background-color: orange; transition: all 0.3s ease;"></div>
-      <div id="crc3" style="width: 17px; height: 17px; border-radius: 50%; margin: 5px; background-color: dimgrey; transition: all 0.3s ease;"></div>
+      <div id="crc3" style="width: 25px; height: 25px; border-radius: 50%; margin: 5px; background-color: dimgrey; transition: all 0.3s ease;"></div>
       <p style="position: absolute; top: 70%; left: 50%; transform: translate(-50%, -50%); font-size: 20px; font-weight: bolder; color: white;">Memuat<span id="dots"></span></p>
   </div>
   <div class="main">
@@ -177,6 +179,8 @@
     </div>
   </div>
       <button id="switch" style="position: fixed; top: 80%; left: 90%; transform: translate(-50%, -50%); width: 45px; height: 45px; border-radius: 50%; border:none; background-color: darkblue; color: white; z-index: 1; text-align: center; z-index: 90;"><i class="fas fa-sun"></i></button>
+      
+      <div class="all-main-container" style="display: none;">
       <p class="info" style="position: absolute; top:  1670px; left: 50%; transform: translate(-50%, -50%); color: white; font-weight: bolder; font-size: 15px;">Author:</p>
       <p class="info" style="position: absolute; top: 1700px; left: 50%; transform: translate(-50%, -50%); color: white; white-space: nowrap; font-size: 13px; font-weight: bolder;">@ Muhammad Cahyo Nugroho.</p>
       <p class="info" style="position: absolute; top: 1720px; left: 50%; transform: translate(-50%, -50%); color: white; white-space: nowrap; font-size: 13px; font-weight: bolder;">@ Ahmad Daniar.</p>
@@ -193,12 +197,14 @@
  </div>
         </div>
       </div>
-  <div class="quotes">
+  <div class="quotes" style="display: none;">
     <img id="quote1" src="Quote1.jpg">
     <img id="quote2"src="Quote2.jpg">
     <h1 style="font-weight: bolder; text-align: center; color: white; position: relative; top: 13%; left: 50%; transform: translate(-50%, -50%); text-shadow: 5px 5px 5px rgba(255,255,255,0.5);">Bangsa yang besar adalah bangsa yang menghormati jasa pahlawannya.</h1>
     <p style="font-weight: bold; position: absolute; top: 90%; left: 50%; transform: translate(-50%, -50%); font-size: 17px; color: white; text-shadow: 5px 5px 5px rgba(255,255,255,0.5);">Ir Soekarno.</p>
   </div>
+  </div>
+
    <div id="notif" style="position: fixed; top: 85%; left: 50%; transform: translate(-50%, -50%); display: none; flex-direction: column; width: 50%; border-radius: 10px; overflow: hidden; z-index: 9999;">
   <div id="tanya" style="padding: 10px; background-color: yellow; display: flex; align-items: center; justify-content: center; font-size: 13px; z-index: 100;">Apakah anda ingin pergi ke halaman lain?</div>
   <div id="jawaban" style="display: flex;">
@@ -295,7 +301,12 @@ setTimeout(
         let uiCon1 = document.getElementsByClassName("ui-container1")[0];
         let uiCon2 = document.getElementsByClassName("ui-container2")[0];
         let swap = document.getElementById("switch");
+        let allMainContainer = document.getElementsByClassName("all-main-container")[0];
+        let quotes = document.getElementsByClassName("quotes")[0];
         
+        
+        allMainContainer.style.display = "";
+        quotes.style.display = "";
         uiCon1.classList.toggle("terlihat");
         uiCon2.classList.toggle("terlihat");
         swap.classList.toggle("terlihat");
@@ -366,8 +377,9 @@ waktu.textContent = time;
 updateTime();
 
 setInterval(updateTime, 1000);
+
 });
       </script>
 </body>
 
-</html>
+  </html>
