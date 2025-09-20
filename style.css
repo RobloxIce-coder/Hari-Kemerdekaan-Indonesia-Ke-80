@@ -1,7 +1,7 @@
 .quotes {
   display: block;
   position: absolute;
-  top: 1430px;
+  top: 270%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 90%;
